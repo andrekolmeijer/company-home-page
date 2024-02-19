@@ -1,0 +1,412 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url('fonts/Montserrat-VariableFont_wght.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat-Italic";
+  src: url('fonts/Montserrat-Italic-VariableFont_wght.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url('fonts/Exo-VariableFont_wght.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --ff-body: "Montserrat", sans-serif;
+  --ff-italic: "Montserrat-Italic", cursive;
+  --ff-heading: "Exo", sans-serif;
+
+  --clr-primary: #191B24;
+  --clr-secundary: #596068;
+  --clr-black: rgba(0, 0, 0, 0.8);
+  --clr-white: rgba(255, 255, 255, 0.8);
+
+  --fs-700: 2rem;
+  --fs-600: 1.5rem;
+  --fs-500: 1.25rem;
+  --fs-400: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overscroll-behavior: none;
+
+  font-family: var(--ff-body);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  color: var(--clr-white);
+  background-color: var(--clr-primary);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-heading);
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+}
+
+h2 {
+  font-size: var(--fs-700);
+  padding: 7.35rem 0 2rem 0;
+}
+
+h3 {
+  font-size: var(--fs-500);
+  padding: 1rem 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media only screen and (max-width: 640px) {
+
+  /* h2 {
+    font-size: var(--fs-600);
+  } */
+
+}
+
+header {
+  background-image: url(img/crusader-industries-logo-4.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 1.5rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+
+  position: fixed;
+  top: 1.5rem;
+  width: 100%;
+  z-index: 99;
+}
+
+header ul {
+  display: flex;
+  gap: 1.5rem;
+  color: var(--clr-black);
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--clr-white);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+header li {
+  list-style: none;
+}
+
+header a {
+  color: var(--clr-black);
+  text-decoration: none;
+}
+
+header a:active,
+header a:visited {
+  color: var(--clr-black);
+}
+
+header a:hover {
+  color: var(--clr-secundary);
+}
+
+header svg {
+  width: 1rem;
+  height: 1rem;
+  margin-bottom: -2px;
+}
+
+header div {
+  border-radius: 100%;
+  overflow: hidden;
+  background-color: var(--clr-white);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
+header div a div {
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header div a div svg {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 2px;
+}
+
+@media only screen and (max-width: 640px) {
+
+  header {
+    min-height: 50vh;
+  }
+
+  header li:nth-child(2),
+  header li:nth-child(5) {
+    display: none;
+  }
+
+  header div {
+    display: none;
+  }
+
+}
+
+#mission {
+  color: var(--clr-black);
+  background-color: var(--clr-white);
+  font-size: var(--fs-600);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* padding: 0 0 3rem 0; */
+}
+
+#mission div {
+  max-width: 80%;
+  border-width: 0px;
+  border-top: 0.125rem;
+  border-bottom: 0.125rem;
+  border-style: solid;
+  border-color: var(--clr-primary);
+  padding: 2rem 0;
+}
+
+#mission p:first-child {
+  font-weight: 500;
+  /* padding: 9.35rem 0 2rem 0; */
+}
+
+#mission p:nth-child(2),
+#mission span {
+  color: var(--clr-secundary);
+  /* padding-top: 1rem; */
+  font-family: var(--ff-italic);
+  font-synthesis: none;
+  font-style: italic;
+  font-weight: 400;
+}
+
+#mission p:nth-child(2) {
+  display: none;
+}
+
+@media only screen and (max-width: 640px) {
+
+  #mission {
+    min-height: 50vh;
+    font-size: var(--fs-500);
+  }
+
+  /* #mission div {
+    max-width: 90%;
+  } */
+
+}
+
+#products,
+#executives {
+  padding: 0 0 2rem 0;
+}
+
+.products,
+.executives {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  gap: 2rem;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.products > div {
+  width: 30%;
+}
+
+#products figure {
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#products img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media only screen and (max-width: 640px) {
+
+  /* .products,
+  .executives {
+    max-width: 90%;
+  } */
+
+  .products > div {
+    width: auto;
+  }
+
+}
+
+#executives {
+  color: var(--clr-black);
+  background-color: var(--clr-white);
+  min-height: calc(100vh + 1px);
+
+  scroll-margin-top: -1px;
+}
+
+.executives > div {
+  width: 222px;
+}
+
+#executives figure {
+  border-radius: 0.25rem;
+  width: 100%;
+  /* height: 334px; */
+  height: 290px;
+  overflow: hidden;
+}
+
+#executives img {
+  width: auto;
+  max-height: 100%;
+  display: block;
+}
+
+#ceo {
+  /* transform: translateX(-36px); */
+  transform: translateX(-14px);
+}
+
+#cto {
+  /* transform: translateX(-61px); */
+  transform: translateX(-38px);
+}
+
+#cfo {
+  /* transform: translateX(-55px); */
+  transform: translateX(-33px);
+}
+
+#executives span {
+  color: var(--clr-secundary);
+  font-weight: 600;
+}
+
+#spaceships {
+  display: flex;
+}
+
+#spaceships figure {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#spaceships img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media only screen and (max-width: 640px) {
+
+  #spaceships {
+    display: block;
+  }
+
+  #spaceships figure {
+    width: 100%;
+  }
+
+}
+
+footer {
+  padding: 3rem 0;
+}
+
+footer div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+footer p {
+  font-family: var(--ff-heading);
+  font-weight: 600;
+}
+
+footer p:nth-child(2) {
+  font-synthesis: none;
+  font-family: var(--ff-italic);
+  font-weight: 300;
+  margin-left: 1rem;
+}
+
+@media only screen and (max-width: 640px) {
+
+  footer div {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  footer p:nth-child(2) {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+}
